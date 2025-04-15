@@ -8,9 +8,12 @@
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   -webkit-tap-highlight-color: transparent;
+}
+
+.logo {
+  margin-right: 2rem;
 }
 
 .logo h1 {
@@ -22,7 +25,8 @@
 .nav-container {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-links {
@@ -53,6 +57,7 @@
 .nav-buttons {
   display: flex;
   gap: 1rem;
+  margin-left: auto;
 }
 
 .demo-btn, .trial-btn {

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     {
@@ -12,7 +14,12 @@ const Navbar = () => {
     },
     {
       title: 'About',
-      dropdown: ['Our Team', 'Our Approach', 'Testimonials', 'FAQ']
+      dropdown: [
+        { text: 'Our Team', path: '/team' },
+        { text: 'Our Approach', path: '/approach' },
+        { text: 'Testimonials', path: '/testimonials' },
+        { text: 'FAQ', path: '/faq' }
+      ]
     },
     {
       title: 'Resources',
@@ -37,10 +44,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <h1>PsyKit</h1>
+        <Link to="/">
+          <h1>PsyKit</h1>
+        </Link>
       </div>
-      <div className="nav-container">
-        <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+      <div className={`nav-container ${isMobileMenuOpen ? 'active' : ''}`}>
+        <ul className="nav-links">
           {navItems.map((item, index) => (
             <li 
               key={index}
@@ -54,7 +63,11 @@ const Navbar = () => {
                 <ul className="dropdown-menu">
                   {item.dropdown.map((subItem, subIndex) => (
                     <li key={subIndex}>
-                      <a href="#">{subItem}</a>
+                      {typeof subItem === 'object' ? (
+                        <Link to={subItem.path}>{subItem.text}</Link>
+                      ) : (
+                        <a href="#">{subItem}</a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -63,7 +76,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="nav-buttons">
-          <button className="demo-btn">Request a Demo</button>
+          <button className="demo-btn" onClick={() => navigate('/demo-request')}>Request a Demo</button>
           <button className="trial-btn">Start Free Trial</button>
         </div>
       </div>
