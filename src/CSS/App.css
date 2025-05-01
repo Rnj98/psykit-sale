@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  min-height: 100vh;
 }
 
 .app {
@@ -10,10 +11,13 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .logo {
-  padding: 1.5em;
+  padding: clamp(0.5em, 2vw, 1.5em);
   will-change: filter;
   transition: filter 300ms;
 }
@@ -40,9 +44,22 @@
 }
 
 .card {
-  padding: 2em;
+  padding: clamp(1em, 3vw, 2em);
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 768px) {
+  .app {
+    padding-top: 60px; /* Account for fixed navbar */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 1em;
+  }
 }
