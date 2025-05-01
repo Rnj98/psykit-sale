@@ -1,10 +1,10 @@
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+  padding: 1rem 2rem;
   position: fixed;
   width: 100%;
-  height: clamp(60px, 10vh, 90px);
+  height: 70px;
   top: 0;
   z-index: 1000;
   display: flex;
@@ -13,12 +13,12 @@
 }
 
 .logo {
-  margin-right: clamp(1rem, 3vw, 2rem);
+  margin-right: 2rem;
 }
 
 .logo h1 {
   color: #4a90e2;
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
@@ -32,7 +32,7 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: 2rem;
   padding: 0;
   margin: 0;
 }
@@ -46,9 +46,8 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.5rem, 2vw, 1rem);
+  padding: 0.5rem 1rem;
   transition: color 0.3s ease;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
 }
 
 .nav-links a:hover {
@@ -57,20 +56,18 @@
 
 .nav-buttons {
   display: flex;
-  gap: clamp(0.5rem, 1.5vw, 1rem);
+  gap: 1rem;
   margin-left: auto;
 }
 
 .demo-btn, .trial-btn {
-  padding: clamp(0.5rem, 1.2vw, 0.8rem) clamp(1rem, 2.5vw, 2rem);
+  padding: 0.5rem 1.5rem;
   border-radius: 4px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
   outline: none;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  white-space: nowrap;
 }
 
 .demo-btn {
@@ -105,7 +102,7 @@
   top: 100%;
   left: 0;
   background-color: #ffffff;
-  min-width: clamp(180px, 20vw, 200px);
+  min-width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 0.5rem 0;
@@ -130,7 +127,7 @@
 
 .dropdown-menu a {
   display: block;
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  padding: 0.75rem 1.5rem;
   color: #333;
   transition: background-color 0.3s ease;
 }
@@ -145,10 +142,9 @@
   display: none;
   background: none;
   border: none;
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: 1.5rem;
   cursor: pointer;
   color: #333;
-  padding: 0.5rem;
 }
 
 /* Mobile Responsive Styles */
@@ -159,16 +155,15 @@
 
   .nav-container {
     position: fixed;
-    top: clamp(50px, 8vh, 70px);
+    top: 70px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - clamp(50px, 8vh, 70px));
+    height: calc(100vh - 70px);
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
-    padding: clamp(1rem, 3vw, 2rem) 0;
+    padding: 2rem 0;
     transition: left 0.3s ease;
-    overflow-y: auto;
   }
 
   .nav-container.active {
@@ -178,7 +173,6 @@
   .nav-links {
     flex-direction: column;
     width: 100%;
-    gap: 0;
   }
 
   .nav-links li {
@@ -188,19 +182,19 @@
 
   .nav-links a {
     display: block;
-    padding: clamp(0.8rem, 2vw, 1rem);
+    padding: 1rem;
   }
 
   .nav-buttons {
     flex-direction: column;
     width: 100%;
-    padding: clamp(0.8rem, 2vw, 1rem);
-    gap: clamp(0.8rem, 2vw, 1rem);
+    padding: 1rem;
+    gap: 1rem;
   }
 
   .demo-btn, .trial-btn {
     width: 100%;
-    padding: clamp(0.8rem, 2vw, 1rem);
+    padding: 1rem;
   }
 
   .dropdown-menu {
@@ -210,7 +204,6 @@
     opacity: 1;
     transform: none;
     display: none;
-    min-width: 100%;
   }
 
   .nav-links li:hover .dropdown-menu,
@@ -219,42 +212,7 @@
   }
 
   .dropdown-menu a {
-    padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 2rem);
+    padding: 0.75rem 2rem;
     background-color: #f5f5f5;
-  }
-}
-
-/* Additional breakpoint for very small screens */
-@media screen and (max-width: 360px) {
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-
-  .logo h1 {
-    font-size: 1.2rem;
-  }
-
-  .mobile-menu-btn {
-    font-size: 1.2rem;
-  }
-}
-
-/* Responsive adjustments */
-@media screen and (min-width: 1400px) {
-  .navbar {
-    height: clamp(70px, 12vh, 100px);
-  }
-  
-  .logo h1 {
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-  }
-  
-  .nav-links a {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-  }
-  
-  .demo-btn, .trial-btn {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    padding: clamp(0.6rem, 1.5vw, 1rem) clamp(1.2rem, 3vw, 2.5rem);
   }
 } 
