@@ -1,10 +1,10 @@
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
+  padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
   position: fixed;
   width: 100%;
-  height: clamp(50px, 8vh, 70px);
+  height: clamp(60px, 10vh, 90px);
   top: 0;
   z-index: 1000;
   display: flex;
@@ -18,7 +18,7 @@
 
 .logo h1 {
   color: #4a90e2;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
   font-weight: 700;
 }
 
@@ -48,7 +48,7 @@
   font-weight: 500;
   padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.5rem, 2vw, 1rem);
   transition: color 0.3s ease;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
 }
 
 .nav-links a:hover {
@@ -62,14 +62,14 @@
 }
 
 .demo-btn, .trial-btn {
-  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1.5rem);
+  padding: clamp(0.5rem, 1.2vw, 0.8rem) clamp(1rem, 2.5vw, 2rem);
   border-radius: 4px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
   outline: none;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   white-space: nowrap;
 }
 
@@ -236,5 +236,25 @@
 
   .mobile-menu-btn {
     font-size: 1.2rem;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 1400px) {
+  .navbar {
+    height: clamp(70px, 12vh, 100px);
+  }
+  
+  .logo h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+  }
+  
+  .nav-links a {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+  }
+  
+  .demo-btn, .trial-btn {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    padding: clamp(0.6rem, 1.5vw, 1rem) clamp(1.2rem, 3vw, 2.5rem);
   }
 } 

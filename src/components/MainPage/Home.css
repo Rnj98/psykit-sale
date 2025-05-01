@@ -35,7 +35,7 @@ body {
 
 .welcome-content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 3vw, 20px);
   display: flex;
@@ -46,7 +46,7 @@ body {
 
 .welcome-text {
   flex: 1;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .welcome-text h1 {
@@ -67,6 +67,8 @@ body {
 .cta-buttons {
   display: flex;
   gap: clamp(1rem, 2vw, 20px);
+  justify-content: flex-start;
+  margin-top: clamp(1.5rem, 3vh, 2.5rem);
 }
 
 .primary-cta {
@@ -113,20 +115,25 @@ body {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
 }
 
 /* Vision Section */
 .vision-section {
   width: 100%;
+  min-height: 100vh;
   padding: clamp(3rem, 6vh, 6rem) 0;
   background-color: #ffffff;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .vision-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 3vw, 20px);
+  width: 100%;
 }
 
 .vision-title {
@@ -200,14 +207,18 @@ body {
 
 /* Specialties Section */
 .specialties-section {
+  min-height: 100vh;
   padding: clamp(3rem, 6vh, 80px) 0;
   background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
 }
 
 .specialties-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 3vw, 20px);
+  width: 100%;
 }
 
 .specialties-title {
@@ -518,5 +529,19 @@ body {
 
   .statement-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .welcome-image img {
+    transform: scale(1.4);
+  }
+  
+  .welcome-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  .welcome-text .subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   }
 } 
