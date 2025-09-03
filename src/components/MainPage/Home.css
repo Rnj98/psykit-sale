@@ -57,6 +57,13 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.gradient-text {
+  background: linear-gradient(135deg, #ff6b9d 0%, #4ecdc4 50%, #45b7d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .welcome-text .subtitle {
   font-size: 1.25rem;
   color: #4a5568;
@@ -208,14 +215,19 @@ body {
 /* Vision Section */
 .vision-section {
   width: 100vw;
-  padding: 6rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   background-color: #ffffff;
   margin: 0;
+  padding: 60px 0;
 }
 
 .vision-content {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .vision-title {
@@ -288,14 +300,18 @@ body {
 
 /* Specialties Section */
 .specialties-section {
-  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   background-color: #f8f9fa;
+  padding: 60px 0;
 }
 
 .specialties-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 .specialties-title {
@@ -326,8 +342,8 @@ body {
 }
 
 .specialties-list {
-  flex: 1;
-  max-width: 300px;
+  flex: 0 0 250px;
+  max-width: 250px;
   position: sticky;
   top: 20px;
   height: fit-content;
@@ -336,12 +352,12 @@ body {
 .specialty-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
+  gap: 12px;
+  padding: 10px 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   background-color: transparent;
 }
 
@@ -371,11 +387,11 @@ body {
 }
 
 .specialty-item .specialty-icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .specialty-item .specialty-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
 }
 
@@ -425,6 +441,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .vision-section,
+  .specialties-section {
+    min-height: 100vh;
+    padding: 40px 0;
+  }
+
   .specialties-container {
     flex-direction: column;
     gap: 20px;

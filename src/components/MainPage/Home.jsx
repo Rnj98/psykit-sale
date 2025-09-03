@@ -33,7 +33,7 @@ const Home = () => {
       <section className="welcome-section">
         <div className="welcome-content">
           <div className="welcome-text">
-            <h1>Psykit: Built for psychiatrists. Designed for better care.</h1>
+            <h1><span className="gradient-text">Psykit</span>: Built for psychiatrists. Designed for better care.</h1>
             <p className="subtitle">Enhance your practice with Psykit, a psychiatrist-focused toolkit designed to simplify daily workflows, improve patient engagement, and support exceptional mental health care.</p>
             <div className="cta-buttons">
               <button className="primary-cta">Start Free Trial</button>

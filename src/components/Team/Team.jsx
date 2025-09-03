@@ -4,34 +4,6 @@ import './Team.css';
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Jeremy',
-      role: 'Role 1',
-      bio: 'With over 15 years of experience in mental health technology, Jeremy leads our team with a vision for transforming psychiatric care through innovative digital solutions.',
-      image: new URL('../../assets/Jeremy.JPG', import.meta.url).href,
-      alt: 'Jeremy - Founder & CEO'
-    },
-    {
-      name: 'Elisheva',
-      role: 'Role 2',
-      bio: 'Elisheva brings extensive expertise in healthcare technology, driving our technical innovation and ensuring our platform meets the highest standards of security and usability.',
-      image: new URL('../../assets/Elisheva.JPG', import.meta.url).href,
-      alt: 'Elisheva - CTO'
-    },
-    {
-      name: 'Kohrman',
-      role: 'Role 3',
-      bio: 'As a licensed psychiatrist, Kohrman ensures our tools align with clinical best practices and meet the real-world needs of mental health professionals.',
-      image: new URL('../../assets/Kohrman.JPG', import.meta.url).href,
-      alt: 'Kohrman - Clinical Director'
-    },
-    {
-      name: 'AJ',
-      role: 'Role 4',
-      bio: 'AJ combines user experience expertise with deep understanding of healthcare workflows to create intuitive and effective solutions for our users.',
-      image: new URL('../../assets/AJ.JPG', import.meta.url).href,
-      alt: 'AJ - Head of Product'
-    },
-    {
       name: 'Ryan',
       role: 'Lead Developer',
       bio: 'Ryan leads our development team, implementing cutting-edge features and maintaining the high performance and reliability of our platform.',

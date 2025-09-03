@@ -9,25 +9,21 @@ const Navbar = () => {
 
   const navItems = [
     {
-      title: 'Services',
-      dropdown: ['Individual Therapy', 'Couples Therapy', 'Family Therapy', 'Group Sessions']
-    },
-    {
-      title: 'About',
+      title: 'Our Toolkit',
       dropdown: [
-        { text: 'Our Team', path: '/team' },
-        { text: 'Our Approach', path: '/approach' },
-        { text: 'Testimonials', path: '/testimonials' },
-        { text: 'FAQ', path: '/faq' }
+        { text: 'Genogram', path: '/genogram' },
+        { text: 'Paitent Rings', path: '/patient-rings' },
+        { text: 'Addiction Timeline', path: '/addiction-timeline' },
+        { text: 'AI Notes', path: '/ai-notes' }
       ]
     },
     {
-      title: 'Resources',
-      dropdown: ['Blog', 'Self-Help Guides', 'Mental Health Resources', 'Contact Us']
+      title: 'Our Team',
+      path: '/team'
     },
     {
-      title: 'Book Appointment',
-      dropdown: ['New Patients', 'Existing Patients', 'Emergency Contact']
+      title: 'Contact Us',
+      dropdown: ['Email Us']
     }
   ];
 
@@ -54,12 +50,18 @@ const Navbar = () => {
             <li 
               key={index}
               className={activeDropdown === index ? 'active' : ''}
-              onMouseEnter={() => window.innerWidth > 768 && setActiveDropdown(index)}
+              onMouseEnter={() => window.innerWidth > 768 && item.dropdown && setActiveDropdown(index)}
               onMouseLeave={() => window.innerWidth > 768 && setActiveDropdown(null)}
               onClick={() => handleNavItemClick(index)}
             >
-              <a href="#">{item.title}</a>
-              {(activeDropdown === index || window.innerWidth <= 768) && (
+              {item.path ? (
+                <Link to={item.path}>{item.title}</Link>
+              ) : item.title === 'Our Toolkit' ? (
+                <Link to="/">{item.title}</Link>
+              ) : (
+                <a href="#">{item.title}</a>
+              )}
+              {(activeDropdown === index || window.innerWidth <= 768) && item.dropdown && (
                 <ul className="dropdown-menu">
                   {item.dropdown.map((subItem, subIndex) => (
                     <li key={subIndex}>
